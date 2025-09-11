@@ -7,7 +7,7 @@ Analyze unstructured data (text) with RDDs and Spark Core Functions.
 ### Prerequisites
 
 - Connect to [Google Colab](https://colab.research.google.com/)
-- Upload the provided [notebook](./lab_google_colab/word_count_colab.ipynb)
+- Upload the provided [notebook](./lab_google_colab/word_count.ipynb)
 
 ### Goals
 
