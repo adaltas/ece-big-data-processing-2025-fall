@@ -67,3 +67,8 @@ Python programming knowledge, Linux/Unix shell basic knowledge.
 - Windows: tumbling, overlapping
 - Handling late data and how long to wait
 - Vocabulary
+
+# Contact Info
+
+- email: joe@adaltas.com
+- github: jsanc525
