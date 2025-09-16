@@ -68,6 +68,33 @@ Python programming knowledge, Linux/Unix shell basic knowledge.
 - Handling late data and how long to wait
 - Vocabulary
 
+## Due Dates
+
+### Group 1
+
+- Lab RDD: TBD
+- Lab SQL & Dataframes: TBD
+- Lab Structured Streaming: TBD
+- Additional labs: TBD
+
+### Group 2
+
+- Lab RDD: TBD
+- Lab SQL & Dataframes: TBD
+- Lab Structured Streaming: TBD
+- Additional labs: TBD
+
+### Group 3
+
+- Lab RDD: TBD
+- Lab SQL & Dataframes: TBD
+- Lab Structured Streaming: TBD
+- Additional Labs: TBD
+
+### All Groups
+
+- Final Project: TBD
+
 # Contact Info
 
 - email: joe@adaltas.com
