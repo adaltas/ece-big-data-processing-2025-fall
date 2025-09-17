@@ -17,7 +17,7 @@ docker run --name pyspark_notebook --rm -v pyspark_notebook_volume:/home/jovyan/
 ### Copy the lab to the volume
 
 ```bash
-docker cp lab_pyspark_jupyter_stand_alone/word_count_pyspark_jupyter_docker.ipynb  pyspark_notebook:/home/jovyan/work/
+docker cp lab_pyspark_jupyter_stand_alone/word_count.ipynb  pyspark_notebook:/home/jovyan/work/
 ```
 
 ## Lab 1: Unstructured data analysis with RDDs
