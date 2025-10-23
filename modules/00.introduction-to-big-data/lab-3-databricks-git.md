@@ -7,7 +7,7 @@ platforms:
   - name: Github  
   - name: Gitlab  
 revisions:
-  - date: 2025-10-09
+  - date: 2025-10-22
     comment: Initial writing
     author: joe@adaltas.com
 tags:
@@ -23,10 +23,10 @@ Databricks provides an API and visual client that allows users to integrate Git 
 
 ## Tasks
 
-1. Git provider configuration (easy level)
-2. Databricks Git Folders configuration (easy level)
-3. Databricks Git UI utilization (easy level)
-4. Databricks notebook Git command utilization (easy level)
+1. Create a new Git project (easy level)
+2. Git provider configuration (easy level)
+3. Databricks Git Folders configuration (easy level)
+4. Databricks Git UI utilization (easy level)
 
 ## Prerequisites
 
@@ -34,7 +34,11 @@ Databricks provides an API and visual client that allows users to integrate Git 
 - An existing account on a Git provider such as Github or Gitlab
 - Familiarity with Git and basic Git commands
 
-## Part 1. Git provider configuration
+## Part 1. Create a new Git project
+
+A new Git repository on [Github](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository) or [Gitlab](https://docs.gitlab.com/user/project/repository/) is created if a project for Databricks does not already exist.
+
+## Part 2. Git provider configuration
 
 Git providers such as Github and Gitlab provide an alternative to using passwords or ssh that can be useful when interacting with APIs or the command line. 
 
@@ -62,7 +66,7 @@ Scroll to the bottom of the page and click on `Generate token`. A new access tok
 
 ### Github Option 2: Configure Fine-grained Personal Access Token
 
-Fine-grained tokens limit access to specific repositories. A new [Github repository is created](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository) prior to creating the token if the project does not already exist.
+Fine-grained tokens limit access to specific repositories. Ensure an appropriate project exists prior to begining this option.  
 
 After signing into Github, click on the user icon in the upper right hand corner and select settings from the drop down.
 
@@ -112,7 +116,7 @@ Databricks will require read and write access to the repository. In `Select scop
 
 A token will be generated. **Note:** Make sure the token is saved somewhere like a password manager as it cannnot be accessed after navigating away from the page. [Proceed to the configuring databricks section](#Part-2:-Databricks-Git-Folders-configuration)
 
-## Part 2: Databricks Git Folders configuration
+## Part 3: Databricks Git Folders configuration
 
 Databricks access to the Git provider is first configured by linking accounts. After logging in to the Databricks account, click on the user icon in top right hand corner and select `settings` from the drop down menu. 
 
@@ -133,3 +137,40 @@ After the Git provider account has been linked, navigate to `Workspace > Users`.
 In the `Create Git folder`, past the url for the desired repo and indicate the correct Git provider. Provide a Git folder name. It is not required that the name of the folder in Databricks match the Git repository name, but this is the best choice for the majority of the cases.  
 
 ![create folder](./assets/db_git_folder_create.png)
+
+## Part 4: Databricks Git UI utilization
+
+Databricks provides a convienient UI for utilizing common Git commands.
+
+Navigate to the Git project configured in the previous step and create a new markdown file by clicking the `Create` button on the upper right hand corner and selecting the `File` option. Change the file name to something to mark it as a temporary such as `temp_file.md`.
+
+![Databricks ui create file](./assets/db_create_file.png)  
+
+Once the file has been added and renamed, add and save some simple content to the file through the Databricks UI. After saving the modified file launch the Databricks Git UI by clicking on the branch name near the top left side of the file.    
+
+![Databricks modify file](./assets/db_modify_file.png)  
+
+The UI is launched and the file just created is listed as a changed file. After an appropriate commit message has been added, the changes in the Databricks Git are added to the Git remote dir by clicking the `Commit & Push` button in the bottom left corner.  
+
+![Databricks commit and push](./assets/db_commit_push.png)  
+
+Work with the changes locally by cloning the project to the local machine or doing a `git pull` in the case that the repo has already been cloned.  Remove the temp file locally, commit and push the change to the remote Git provider. 
+
+```bash
+# Copy project from remote Git provider in the case it does not exist locally
+git clone '<remote_repo_url>'
+
+# Or pull the changes if the repo already exists locally
+git pull
+
+# Remove the temp file locally
+git rm '<temp_file>'
+
+# Commit and push the changes
+git commit -m "fix: removes temp file"
+git push
+```
+
+Finally, ensure the changes are updated in Databricks. Return to the Databricks project and launch the Git UI. Click the `Pull` button in the top right corner to sync changes from the remote Git provider. **Note:** The number next to `Pull` on the button indicates the number of commits that will be pulled from the remote repository. Additionally a warning message may appear letting users know that certain content like `cell outputs, visualizations, dashboards...` will be cleared by completing the pull.  
+
+![Databricks pull remote changes](./assets/db_ui_pull.png)
