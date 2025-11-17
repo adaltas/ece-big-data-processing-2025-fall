@@ -1,6 +1,6 @@
 # Quick Kafka Demo
 
-Complete the [Kafka quick start guide](https://kafka.apache.org/quickstart) through step 5. Note that you will need complete step one to download and untar kafka on your local machine to be able to access the cli commands. Additonally, don't forget to complete step 8 once the lab is completed in order to stop the kafka environment ( and dont forget to stop the docker container ).  
+Complete the [Kafka quick start guide](https://kafka.apache.org/quickstart) through step 5. Note that you will need complete step one to download and untar kafka on your local machine to be able to access the cli commands. For step two, choose the `Using GraalVM Based Native Apache Kafka Docker Image` option. Finally, in order to stop the kafka environment complete step eight along with  stopping the docker container.   
 
 **BONUS**
 
