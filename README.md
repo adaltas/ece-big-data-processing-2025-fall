@@ -72,24 +72,18 @@ Python programming knowledge, Linux/Unix shell basic knowledge.
 
 ### Group 1
 
-- Lab RDD: TBD
-- Lab SQL & Dataframes: TBD
-- Lab Structured Streaming: TBD
-- Additional labs: TBD
+- Labs for bonus: Nov 21, 2025
+- Project: Dec 19, 2025
 
 ### Group 2
 
-- Lab RDD: TBD
-- Lab SQL & Dataframes: TBD
-- Lab Structured Streaming: TBD
-- Additional labs: TBD
+- Labs for bonus: Nov 16, 2025
+- Project: Dec 14, 2025
 
 ### Group 3
 
-- Lab RDD: TBD
-- Lab SQL & Dataframes: TBD
-- Lab Structured Streaming: TBD
-- Additional Labs: TBD
+- Labs for bonus: Nov 21, 2025
+- Project: Dec 19, 2025
 
 ### All Groups
 
